@@ -1,0 +1,8 @@
+#!/bin/sh
+read -p "What is the url of the MSX server? [ws://localhost:8080] " url
+if [ -z "$url" ]; then
+  url=ws://localhost:8080
+fi
+
+
+echo "{ \"url\": \"$url\"}" > connectionDetails.json

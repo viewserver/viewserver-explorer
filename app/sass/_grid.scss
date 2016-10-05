@@ -1,0 +1,125 @@
+/*
+ * Copyright 2016 Claymore Minds Limited and Niche Solutions (UK) Limited
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@if import-once("_grid.scss") {
+
+  .grid {
+    max-width: 3000px;
+    min-width: 1000px;
+    margin-bottom: 20px;
+  }
+
+  .grid.operator {
+    height: 500px !important;
+  }
+
+  .grid.connections {
+    height: 200px !important;
+  }
+
+  .reportGrid {
+    height: 600px !important;
+    max-height: 500px;
+    max-width: 3000px;
+    min-width: 1000px;
+    margin-bottom: 40px;
+  }
+
+  .schemaGrid {
+    height: 200px !important;
+  }
+
+  .rowCount {
+    font-style: italic;
+    font-size: 18px;
+    font-size: 1.8rem;
+    color: rgb(163, 162, 162);
+    display: inline;
+    right: 20px;
+    position: absolute;
+  }
+
+  .ui-grid {
+    border-width: 0px;
+    font-size: 14px;
+
+    .ui-grid-menu{
+      color: #000000;
+    }
+
+    .ui-grid-header-cell {
+      padding: 5px;
+      height: 50px;
+    }
+
+    .ui-grid-row:nth-child(odd) .ui-grid-cell, .ui-grid-header-cell, .ui-grid-header-cell-wrapper, .ui-grid-header-viewport {
+      background-color: $gridOddColor;
+    }
+    .ui-grid-row:nth-child(even) .ui-grid-cell {
+      background-color: $gridEvenColor;
+    }
+
+    .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
+      background-color: #2C84B3;
+      color: #ffffff;
+    }
+
+    .ui-grid-cell {
+      border-bottom-width: 1px;
+    }
+
+    .ui-grid-cell, .ui-grid-header-cell {
+      border-color: $gridBorderColor;
+    }
+
+    .ui-grid-header {
+      border-bottom: 1px solid $gridBorderColor;
+    }
+
+    .ui-grid-header-cell:last-child .ui-grid-column-resizer.right {
+      border-right: 1px solid $gridBorderColor;
+    }
+
+    .ui-grid-cell-contents {
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    .ui-grid-filter-container {
+      padding: 5px;
+    }
+
+    input[type=text].ui-grid-filter-input {
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-weight: normal;
+    }
+
+    .clickable {
+      cursor: pointer;
+    }
+
+ /*   .ui-grid-column-menu-button, */.ui-grid-header-cell .ui-grid-sort-priority-number{
+      display: none;
+    }
+
+    .ui-grid-render-container-body .ui-grid-viewport, .ui-grid-render-container-body .ui-grid-header-viewport{
+      width:auto !important;
+    }
+  }
+
+}

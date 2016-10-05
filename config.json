@@ -1,0 +1,7 @@
+{
+    "hostname": "localhost",
+    "source": "app",
+    "destination": "dist",
+    "port": 9003,
+    "livereloadPort": 35733
+}

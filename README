@@ -1,0 +1,8 @@
+run npm install -g bower
+run npm install -g grunt-cli
+then npm install
+install ruby http://rubyinstaller.org/downloads/
+add ruby executables to path C:\Ruby22-x64\bin
+install sass "gem install sass"
+
+then type 'grunt' to run
